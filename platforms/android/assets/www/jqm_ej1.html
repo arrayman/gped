@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2" />
+    <title>jquery mobile base_0.2</title>
+    
+	<!-- <link rel="stylesheet" href="./css/jquery.mobile-1.3.2.min.css" /> -->
+	<!-- <script src="./js/jquery-2.0.3.min.js"></script> -->
+	<!-- <script src="./js/JQueryMobile/jquery.mobile-1.3.2.min.js"></script>  -->
+	<link rel="stylesheet" href="./css/jquery.mobile-1.3.2.css" />
+    
+</head>
+
+<body>
+
+    <div data-role="page" id="main" data-title="Geped" >
+        
+		<div data-role="header" >
+            <!-- <h1> Gestion de pedidos </h1> -->
+			Gestion de pedidos v1.00.00
+        </div>
+
+        <div data-role="content" class="content-primary">
+
+			<div data-content-theme="d" data-theme="b" data-role="collapsible-set" class="ui-collapsible-set">
+				<div data-role="collapsible" class="ui-collapsible ui-collapsible-inset ui-collapsible-collapsed">
+					<h2 class="ui-collapsible-heading ui-collapsible-heading-collapsed">
+						<a class="ui-collapsible-heading-toggle ui-btn ui-btn-icon-left ui-corner-top ui-btn-up-b" href="#" data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="plus" data-iconpos="left" data-theme="b">
+							<span class="ui-btn-inner ui-corner-top">
+								<span class="ui-btn-text">Filtered list
+									<span class="ui-collapsible-heading-status"> click to expand contents</span>
+								</span>
+								<span class="ui-icon ui-icon-plus ui-icon-shadow">&nbsp;</span>
+							</span>
+						</a>
+					</h2>
+					<div class="ui-collapsible-content ui-body-d ui-collapsible-content-collapsed" aria-hidden="true">
+					
+						<form class="ui-listview-filter ui-bar-c" role="search">
+							<div class="ui-input-search ui-shadow-inset ui-btn-corner-all ui-btn-shadow ui-icon-searchfield ui-body-c">
+								<input placeholder="Filter items..." data-type="search" class="ui-input-text ui-body-c">
+									<a title="clear text" class="ui-input-clear ui-btn ui-btn-up-c ui-shadow ui-btn-corner-all ui-fullsize ui-btn-icon-notext ui-input-clear-hidden" href="#" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-icon="delete" data-iconpos="notext" data-theme="c" data-mini="false">
+										<span class="ui-btn-inner ui-btn-corner-all">
+											<span class="ui-btn-text">clear text</span>
+											<span class="ui-icon ui-icon-delete ui-icon-shadow">&nbsp;</span>
+										</span>
+									</a>
+								</div>
+						</form>
+							<ul data-divider-theme="d" data-filter-theme="c" data-filter="true" data-role="listview" class="ui-listview">
+								<li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="arrow-r" data-iconpos="right" data-theme="d" class="ui-btn ui-btn-up-d ui-btn-icon-right ui-li-has-arrow ui-li">
+									<div class="ui-btn-inner ui-li">
+										<div class="ui-btn-text">
+											<a href="index.html" class="ui-link-inherit">Adam Kinkaid</a>
+										</div>
+										<span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span>
+									</div>
+								</li>
+								<li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="arrow-r" data-iconpos="right" data-theme="d" class="ui-btn ui-btn-up-d ui-btn-icon-right ui-li-has-arrow ui-li">
+									<div class="ui-btn-inner ui-li">
+										<div class="ui-btn-text">
+											<a href="index.html" class="ui-link-inherit">Alex Wickerham</a>
+										</div>
+										<span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span>
+									</div>
+								</li>
+								<li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="arrow-r" data-iconpos="right" data-theme="d" class="ui-btn ui-btn-up-d ui-btn-icon-right ui-li-has-arrow ui-li">
+									<div class="ui-btn-inner ui-li">
+										<div class="ui-btn-text">
+											<a href="index.html" class="ui-link-inherit">Avery Johnson</a>
+										</div>
+										<span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span>
+									</div>
+								</li>
+								<li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="arrow-r" data-iconpos="right" data-theme="d" class="ui-btn ui-btn-up-d ui-btn-icon-right ui-li-has-arrow ui-li">
+									<div class="ui-btn-inner ui-li">
+										<div class="ui-btn-text">
+											<a href="index.html" class="ui-link-inherit">Bob Cabot</a>
+										</div>
+										<span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span>
+									</div>
+								</li>
+								<li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="arrow-r" data-iconpos="right" data-theme="d" class="ui-btn ui-btn-up-d ui-btn-icon-right ui-li-has-arrow ui-li ui-li-last">
+									<div class="ui-btn-inner ui-li">
+										<div class="ui-btn-text">
+											<a href="index.html" class="ui-link-inherit">Caleb Booth</a>
+										</div>
+										<span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span>
+									</div>
+								</li>
+						</ul>
+					</div>
+				</div>
+				<div data-role="collapsible" class="ui-collapsible ui-collapsible-inset ui-collapsible-collapsed"><h2 class="ui-collapsible-heading ui-collapsible-heading-collapsed"><a class="ui-collapsible-heading-toggle ui-btn ui-btn-icon-left ui-btn-up-b" href="#" data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="plus" data-iconpos="left" data-theme="b"><span class="ui-btn-inner"><span class="ui-btn-text">Formatted text<span class="ui-collapsible-heading-status"> click to expand contents</span></span><span class="ui-icon ui-icon-plus ui-icon-shadow">&nbsp;</span></span></a></h2><div class="ui-collapsible-content ui-body-d ui-collapsible-content-collapsed" aria-hidden="true">
+					
+					<ul data-divider-theme="d" data-theme="d" data-role="listview" class="ui-listview">
+						<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-d ui-li-has-count">Friday, October 8, 2010 <span class="ui-li-count ui-btn-up-c ui-btn-corner-all">2</span></li>
+						<li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="arrow-r" data-iconpos="right" data-theme="d" class="ui-btn ui-btn-up-d ui-btn-icon-right ui-li-has-arrow ui-li"><div class="ui-btn-inner ui-li"><div class="ui-btn-text"><a href="index.html" class="ui-link-inherit"><p class="ui-li-aside ui-li-desc"><strong>6:24</strong>PM</p>
+							<h3 class="ui-li-heading">Stephen Weber</h3>
+							<p class="ui-li-desc"><strong>You've been invited to a meeting at Filament Group in Boston, MA</strong></p>
+							<p class="ui-li-desc">Hey Stephen, if you're available at 10am tomorrow, we've got a meeting with the jQuery team.</p>
+							
+						</a></div><span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span></div></li>
+						<li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="arrow-r" data-iconpos="right" data-theme="d" class="ui-btn ui-btn-up-d ui-btn-icon-right ui-li-has-arrow ui-li ui-li-last"><div class="ui-btn-inner ui-li"><div class="ui-btn-text"><a href="index.html" class="ui-link-inherit"><p class="ui-li-aside ui-li-desc"><strong>9:18</strong>AM</p>
+							<h3 class="ui-li-heading">jQuery Team</h3>
+							<p class="ui-li-desc"><strong>Boston Conference Planning</strong></p>
+							<p class="ui-li-desc">In preparation for the upcoming conference in Boston, we need to start gathering a list of sponsors and speakers.</p>
+							
+						</a></div><span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span></div></li>
+					</ul>
+				</div></div>
+				<div data-role="collapsible" class="ui-collapsible ui-collapsible-inset ui-collapsible-collapsed"><h2 class="ui-collapsible-heading ui-collapsible-heading-collapsed"><a class="ui-collapsible-heading-toggle ui-btn ui-btn-icon-left ui-corner-bottom ui-btn-up-b" href="#" data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="plus" data-iconpos="left" data-theme="b"><span class="ui-btn-inner ui-corner-bottom"><span class="ui-btn-text">Thumbnails and split button<span class="ui-collapsible-heading-status"> click to expand contents</span></span><span class="ui-icon ui-icon-plus ui-icon-shadow">&nbsp;</span></span></a></h2><div class="ui-collapsible-content ui-body-d ui-collapsible-content-collapsed" aria-hidden="true">
+					
+					<ul data-split-theme="d" data-split-icon="gear" data-role="listview" class="ui-listview">
+						<li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="false" data-iconpos="right" data-theme="d" class="ui-btn ui-btn-up-d ui-btn-icon-right ui-li ui-li-has-alt ui-li-has-thumb"><div class="ui-btn-inner ui-li ui-li-has-alt"><div class="ui-btn-text"><a href="index.html" class="ui-link-inherit">
+							<img src="images/album-bb.jpg" class="ui-li-thumb">
+							<h3 class="ui-li-heading">Broken Bells</h3>
+							<p class="ui-li-desc">Broken Bells</p>
+							</a></div></div><a data-transition="slideup" data-rel="dialog" href="lists-split-purchase.html" title="Purchase album
+						" class="ui-li-link-alt ui-btn ui-btn-up-d ui-btn-icon-notext" data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="false" data-iconpos="notext" data-theme="d"><span class="ui-btn-inner"><span class="ui-btn-text"></span><span data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-icon="gear" data-iconpos="notext" data-theme="d" title="" class="ui-btn ui-btn-up-d ui-shadow ui-btn-corner-all ui-btn-icon-notext"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text"></span><span class="ui-icon ui-icon-gear ui-icon-shadow">&nbsp;</span></span></span></span></a></li>
+						<li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="false" data-iconpos="right" data-theme="d" class="ui-btn ui-btn-up-d ui-btn-icon-right ui-li ui-li-has-alt ui-li-has-thumb"><div class="ui-btn-inner ui-li ui-li-has-alt"><div class="ui-btn-text"><a href="index.html" class="ui-link-inherit">
+							<img src="images/album-hc.jpg" class="ui-li-thumb">
+							<h3 class="ui-li-heading">Warning</h3>
+							<p class="ui-li-desc">Hot Chip</p>
+						</a></div></div><a data-transition="slideup" data-rel="dialog" href="lists-split-purchase.html" title="Purchase album
+						" class="ui-li-link-alt ui-btn ui-btn-up-d ui-btn-icon-notext" data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="false" data-iconpos="notext" data-theme="d"><span class="ui-btn-inner"><span class="ui-btn-text"></span><span data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-icon="gear" data-iconpos="notext" data-theme="d" title="" class="ui-btn ui-btn-up-d ui-shadow ui-btn-corner-all ui-btn-icon-notext"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text"></span><span class="ui-icon ui-icon-gear ui-icon-shadow">&nbsp;</span></span></span></span></a></li>
+						<li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="false" data-iconpos="right" data-theme="d" class="ui-btn ui-btn-up-d ui-btn-icon-right ui-li ui-li-has-alt ui-li-has-thumb ui-li-last"><div class="ui-btn-inner ui-li ui-li-has-alt"><div class="ui-btn-text"><a href="index.html" class="ui-link-inherit">
+							<img src="images/album-p.jpg" class="ui-li-thumb">
+							<h3 class="ui-li-heading">Wolfgang Amadeus Phoenix</h3>
+							<p class="ui-li-desc">Phoenix</p>
+							</a></div></div><a data-transition="slideup" data-rel="dialog" href="lists-split-purchase.html" title="Purchase album
+						" class="ui-li-link-alt ui-btn ui-btn-up-d ui-btn-icon-notext" data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="false" data-iconpos="notext" data-theme="d"><span class="ui-btn-inner"><span class="ui-btn-text"></span><span data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-icon="gear" data-iconpos="notext" data-theme="d" title="" class="ui-btn ui-btn-up-d ui-shadow ui-btn-corner-all ui-btn-icon-notext"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text"></span><span class="ui-icon ui-icon-gear ui-icon-shadow">&nbsp;</span></span></span></span></a></li>	
+					</ul>
+				</div></div>
+			</div>
+		</div>			
+
+	
+
+		<script src="./js/jquery-2.0.3.js"></script>
+    	<script src="./js/JQueryMobile/jquery.mobile-1.3.2.js"></script> 
+
+    	<!-- <link href="../../css/themes/default/jquery.mobile-1.2.1.css" rel="stylesheet"> -->
+		<link href="http://jquerymobile.com/demos/1.2.1/_assets/css/jqm-docs.css" rel="stylesheet">
+		<script src="//code.jquery.com/jquery-1.7.1.min.js"></script> 
+		<script src="http://jquerymobile.com/demos/1.2.1/docs/_assets/js/jqm-docs.js"></script> 
+		<!--<script src="../../js/jquery.mobile-1.2.1.js">-->
+	</body>
+</html>
+
+

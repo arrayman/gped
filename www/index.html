@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2" />
+    <title>jquery mobile base_0.2</title>
+    
+	<!-- <link rel="stylesheet" href="./css/jquery.mobile-1.3.2.min.css" /> -->
+	<!-- <script src="./js/jquery-2.0.3.min.js"></script> -->
+	<!-- <script src="./js/JQueryMobile/jquery.mobile-1.3.2.min.js"></script>  -->
+	<link rel="stylesheet" href="./css/jquery.mobile-1.3.2.css" />
+    
+</head>
+<!-- 
+ 
+ 
+  -->
+<body>
+
+    <div data-role="page" id="main" data-title="Geped" >
+        
+		<div data-role="header" >
+            <!-- <h1> Gestion de pedidos </h1> -->
+			Gestion de pedidos v1.00.00
+        </div>
+		
+		<div data-role="header" data-theme="b">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#main" data-transition="none">Lista</a></li>
+					<li><a href="#pantalla2" data-transition="none">Articulo</a></li>
+					<li><a href="articulo.html#main" rel="external">p1</a></li>
+				</ul>
+			</div><!–- /navbar –->
+		</div>
+		<div data-role="content" >
+			<p> contenido </p>
+			
+			
+			<div class="app">
+				<h1>Apache Cordova</h1>
+				<div id="deviceready" class="blink">
+					<p class="event listening">Connecting to Device</p>
+					<p class="event received">Device is Ready</p>
+				</div>	
+			</div> 	
+		</div>
+		
+        <!-- <a href="#pantalla2" data-role="button" data-rel="dialog"> Ir a Pantalla 2 </a> -->
+		<!-- <a href="#pantalla3" > Mostrar Pantalla 3 </a> -->
+		
+		<div data-role="footer" data-theme="b"data-position="fixed">
+			<a href="http://www.arrayman.com"> (c) arrayman.com</a> 
+			
+			
+		</div> 
+    </div>
+	
+	
+    <div data-role="page" id="pantalla2">
+        <div data-role="header" >
+            <!-- <h1> Pantalla 2 </h1> -->
+			Gestion de pedidos v.1.00.00
+        </div>
+		<div data-role="header" data-theme="b">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#main" data-transition="none">Lista</a></li>
+					<li><a href="#pantalla2" data-transition="none">Articulo</a></li>
+				</ul>
+			</div><!–- /navbar –->
+		</div>
+		<div data-role="content">
+			
+		</div>
+
+		
+   
+		 <div data-role="footer" data-position="fixed">
+			(c) ncs p2
+			<a href="#" data-rel="back" data-role="button" > Regresar 2</a>
+		</div> 
+	</div>
+		
+		
+	
+		<script src="./js/jquery-2.0.3.js"></script>
+    	<script src="./js/JQueryMobile/jquery.mobile-1.3.2.js"></script> 
+        <script type="text/javascript" src="cordova.js"></script>
+
+        <!-- app files-->
+        <script type="text/javascript" src="js/app/pedido.js"></script>
+        <script type="text/javascript" src="js/app/db.js"></script>
+        <script type="text/javascript" src="js/app/index.js"></script>
+        <script type="text/javascript">
+            //app.initialize();
+            //alert('boo');
+            //alert(com_arrayman_gped_db.TDb.name +' ' + oDb.TDb.name);
+
+
+            //pck_Db.oTDb.openDatabase();
+			oApp.init('hola mundo'); 
+        </script><!-- -->
+</body>
+
+</html>
