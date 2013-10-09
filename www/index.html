@@ -21,15 +21,15 @@
         
 		<div data-role="header" >
             <!-- <h1> Gestion de pedidos </h1> -->
-			Gestion de pedidos v1.00.00
+			<span id="spversion">Gestion de pedidos </span> 
         </div>
 		
 		<div data-role="header" data-theme="b">
 			<div data-role="navbar">
 				<ul>
 					<li><a href="#main" data-transition="none">Lista</a></li>
-					<li><a href="#pantalla2" data-transition="none">Articulo</a></li>
-					<li><a href="articulo.html#main" rel="external">p1</a></li>
+					<!-- <li><a href="#pantalla2" data-transition="none">Articulo</a></li> -->
+					<li><a href="articulo.html#main" rel="external">Articulos</a></li>
 				</ul>
 			</div><!–- /navbar –->
 		</div>
@@ -57,9 +57,9 @@
     </div>
 	
 	
-    <div data-role="page" id="pantalla2">
+   <!--  <div data-role="page" id="pantalla2">
         <div data-role="header" >
-            <!-- <h1> Pantalla 2 </h1> -->
+            <h1> Pantalla 2 </h1> 
 			Gestion de pedidos v.1.00.00
         </div>
 		<div data-role="header" data-theme="b">
@@ -80,7 +80,7 @@
 			(c) ncs p2
 			<a href="#" data-rel="back" data-role="button" > Regresar 2</a>
 		</div> 
-	</div>
+	</div> -->
 		
 		
 	
@@ -90,9 +90,10 @@
 
         <!-- app files-->
         <script type="text/javascript" src="js/app/pedido.js"></script>
+        <script type="text/javascript" src="js/app/articulo.js"></script>
         <script type="text/javascript" src="js/app/db.js"></script>
         <script type="text/javascript" src="js/app/index.js"></script>
-        <script type="text/javascript">
+        <script type="text/javascript"> 
             //app.initialize();
             //alert('boo');
             //alert(com_arrayman_gped_db.TDb.name +' ' + oDb.TDb.name);
@@ -100,6 +101,7 @@
 
             //pck_Db.oTDb.openDatabase();
 			oApp.init('hola mundo'); 
+			$("#spversion").html("Gestión de pedidos " + oApp.version);
         </script><!-- -->
 </body>
 

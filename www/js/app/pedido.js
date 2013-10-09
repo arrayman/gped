@@ -45,7 +45,8 @@ com_arrayman_gped_ped=
     mas:function()
     {
     },
-    create_tblPEDS_INE:''
+    create_tblPEDS_INE:'',
+    create_tblArtXPED_INE:''
 }
 
 var pck_Ped = com_arrayman_gped_ped;
@@ -53,7 +54,8 @@ var pck_Ped = com_arrayman_gped_ped;
     pck_Ped.create_tblPEDS_INE = 'CREATE TABLE IF NOT EXISTS tblPEDS ' + 
         '( id integer primary key autoincrement, codigo varchar, descrip varchar, aux varchar )';
 
-
+    pck_Ped.create_tblArtXPED_INE = 'CREATE TABLE IF NOT EXISTS tblArtXPED ' + 
+        '( id integer primary key autoincrement, ped_cod varchar, art_cod varchar, cantidad integer )';
 
 
 //****************************

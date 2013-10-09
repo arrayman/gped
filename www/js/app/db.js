@@ -18,6 +18,7 @@ com_arrayman_gped_db =
 	},
 	oTDb: '',
 	kk: 'kk',
+	oResult : '',
 	openDatabase : function (oTDb)
 	{	//SIN hacer un new. this sera el namespace.!!!!
 		var _lthis='';
@@ -34,7 +35,62 @@ com_arrayman_gped_db =
 		_lthis.oMyDB.midummy='lio';
 		return _lthis.oMyDB;
 	},
-	
+	select_sql :function(oTDb,select_sql,observer)
+	{
+		if (oTDb.oMyDB.transaction == null)
+		{
+			//oTDb.oMyDB = oTDb.openDatabase(oTDb);
+			oTDb.openDatabase(oTDb);
+		}
+
+		function do_select(oTran)
+		{
+			oTran.executeSql(
+				select_sql,
+				[],
+				function(oTran,oResult) //success
+				{
+					console.log("Returned rows = " + oResult.rows.length);	
+					com_arrayman_gped_db.oResult = oResult;	
+					if (observer != null)
+						observer(oResult);
+				},
+				error_select
+			);
+		};
+		
+		function error_select()
+		{
+			console.log("error " + err.code + ' ' + err.message);
+		};
+
+		oTDb.oMyDB.transaction(do_select, error_select);
+	},
+	run_sql : function(oTDb,sql)
+	{	
+		if (oTDb.oMyDB.transaction == null)
+		{
+			//oTDb.oMyDB = oTDb.openDatabase(oTDb);
+			oTDb.openDatabase(oTDb);
+		}
+		
+		oTDb.oMyDB.transaction(
+			function (oTran)
+			{
+				console.log(sql);
+				oTran.executeSql(sql);
+			},
+			function(err)
+			{
+				//alert("error " + err.code + ' ' + err.message);
+				console.log("error " + err.code + ' ' + err.message);
+			},
+			function()
+			{
+				//ok 
+			}
+		);
+	},
 	createTableS_INE : function(oTDb)
 	{
 		// myDB.executeSql(‘CREATE TABLE IF NOT EXISTS table1 (id unique, firstname
@@ -52,16 +108,12 @@ com_arrayman_gped_db =
 		_lthis.oMyDB.transaction(
 			function(oTran) //sentenciaS sql
 			{ 
-				var sSql = 'CREATE TABLE IF NOT EXISTS tblARTICULOS ' + 
-				'( id integer primary key autoincrement, codigo varchar, desc varchar, aux varchar )';
+
+				oTran.executeSql(pck_Art.create_tblARTS_INE);
 
 				oTran.executeSql(pck_Ped.create_tblPEDS_INE);
 
-				oTran.executeSql(sSql);
-				sSql = 'INSERT INTO tblARTICULOS ' +
-				' (codigo, desc, aux) VALUES ("0000110", "desc:carniceria","110")';
-
-				oTran.executeSql(sSql);
+				oTran.executeSql(pck_Ped.create_tblArtXPED_INE);
 
 			},
 			function(err) //callback error
@@ -70,7 +122,7 @@ com_arrayman_gped_db =
 			},
 			function() //callback OK
 			{
-				alert("se creo tabla tblARTICULOS ");
+				//alert("se creo tabla tblARTICULOS ");
 			}
 		);
 	
