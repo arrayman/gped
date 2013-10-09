@@ -26,7 +26,7 @@ var oApp =
 		//alert('init '+ this + '  ' + $p1);
 		
 		this.EnlazaEventos();
-		this.version = 'v1.00.00';
+		this.version = 'v1.00.01';
 		
 	},
 	
@@ -43,7 +43,7 @@ var oApp =
 
         //oTDb = new pck_Db.TDb();
         pck_Db.oTDb.openDatabase();
-		alert('dispositivo listo');
+		//alert('dispositivo listo');
 	},
     // Update DOM on a Received Event
     receivedEvent: function(id) {

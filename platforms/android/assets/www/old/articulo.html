@@ -29,47 +29,33 @@
 			<h3>DEMO PAGE</h3>
 			<div class="ui-grid-c">
 				<div class="ui-block-a">
-					<a data-role="button" data-inline="true" onclick= "Get_From_Qr()" data-icon="search" data-iconpos="right"> Qr </a>
+					<a data-role="button" data-inline="true" onclick= "Get_From_Qr()" data-icon="search"
+                      data-iconpos="right">
+                          Qr
+            		</a>
 				</div>
-
 				<div class="ui-block-b">
 					<div data-role="fieldcontain" class="ui-hide-label " data-controltype="textinput">
 			            <label for="tbCodigo">Codigo:</label>
 			            <input type="text" name="Codigo" id="tbCodigo" value="" placeholder="Codigo" />
 					</div>
 				</div>
-
 				<div class="ui-block-c">
 					<div data-role="fieldcontain" class="ui-hide-label " data-controltype="textinput">
 			            <label for="tbUnidades">Unidades:</label>
 			            <input type="text" name="Unidades" id="tbUnidades" value="" placeholder="Cantidad" />
 					</div>
 				</div>
-
 				 <div class="ui-block-d">
 					€<a data-role="button" data-inline="true" onclick= "search_art()" data-icon="check"
                       data-iconpos="right">
                           Add
             		</a>
+					
 				</div>
 			</div>
 			<span id="lbDesc">Descripción:</span>
-
-			
-			<!-- <div id="lvArts_kk" >
-				<h3> Articulos</h3>
-				<ul data-role="listview" data-inset="true">
-					<li>
-						tres
-					</li>
-					<li>
-						cuatro
-					</li>
-				</ul>
-			</div> -->
-
-			<div id="lvArts"  > <!-- data-role="collapsible" -->
-				<!-- <h3> Articul</h3>
+			<div id="lvArts" data-role="collapsible" >
 				<ul data-role="listview" data-inset="true">
 					<li>
 						uno
@@ -77,32 +63,38 @@
 					<li>
 						dos
 					</li>
-				</ul> -->
+				</ul>
 			</div>
 
-			<div class="ui-grid-f">
-				<div class="ui-block-a">
-					<label for="search-basic">Search Input:</label>
-					<input type="search" name="search" id="search-basic" value="" />
-				</div>
 
-				<div class="ui-block-b">
-					<div data-role="fieldcontain">
-						<label for="search-2">Search Input:</label>
-						<input type="search" name="search-2" id="search-2" value="" />
-					</div>
-				</div>
-				<div class="ui-block-c">3</div>
-				<div class="ui-block-d">4</div>
+			<!-- <div data-role="controlgroup" data-type="horizontal">
+				
+			</div> -->
 			
-				<div class="ui-block-e">
-					<!--<a data-role="button" data-inline="true" onclick= "show_art()" data-icon="search"
+		
+		<div class="ui-grid-f">
+			<div class="ui-block-a">
+				<label for="search-basic">Search Input:</label>
+				<input type="search" name="search" id="search-basic" value="" />
+			</div>
+
+			<div class="ui-block-b">
+				<div data-role="fieldcontain">
+					<label for="search-2">Search Input:</label>
+					<input type="search" name="search-2" id="search-2" value="" />
+				</div>
+			</div>
+			<div class="ui-block-c">3</div>
+			<div class="ui-block-d">4</div>
+			
+			<div class="ui-block-e">
+				<!--<a data-role="button" data-inline="true" onclick= "show_art()" data-icon="search"
                       data-iconpos="right">
                           Qr
             		</a>-->
-				 	<input id="kkButton" type="button" value="mostrar"  onclick= "show_art()" /> 	 
-				</div>
+				 <input id="kkButton" type="button" value="mostrar"  onclick= "show_art()" /> 	 
 			</div>
+		</div>
 
 		</div>		
 				
@@ -117,6 +109,10 @@
 					<!-- <li><a href="p1.html" data-transition="none" >p1</a></li> -->
 				</ul>
 			</div><!-- /navbar -->
+		<!-- </div>
+
+
+		<div data-role="footer" data-theme="b" > -->
 			<div class="ui-grid-b">
 				<div class="ui-block-a">
 					<p id="lbLog" > log: </p>		
@@ -132,18 +128,23 @@
 		</div> 
     </div>
 	
+	
+    
+		
+	
+	
+        <!-- <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script> -->
+        
+           <!-- app.initialize();
+			oApp.init('hola mundo'); 
+        </script> -->
 
 
-	<script src="./js/jquery-2.0.3.js"></script>
+    <script src="./js/jquery-2.0.3.js"></script>
     <script src="./js/JQueryMobile/jquery.mobile-1.3.2.js"></script> 
-    <!--<script type="text/javascript" src="cordova.js"></script>-->
-
-    <!-- app files-->
-        <script type="text/javascript" src="js/app/pedido.js"></script>
-        <script type="text/javascript" src="js/app/articulo.js"></script>
-        <script type="text/javascript" src="js/app/db.js"></script>
-        <script type="text/javascript" src="js/app/index.js"></script>
-		<script src="./js/jsrender/jsrender.js"></script> <!---->
+	<script src="./js/app/articulo.js"></script> 
+	<script src="./js/jsrender/jsrender.js"></script> 
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <!-- <script src="//code.jquery.com/jquery.js"></script> -->
@@ -153,50 +154,27 @@
         <script type="text/javascript" >
         
 		//var apiUrl = oArt.url_get_arts;
-			var g_oArt = pck_Art.oArt; //new TArt;
+			var g_oArt = new TArt;
 					
 			var oPedidos = new Array();
 
     		$(document).ready(function () 
     		{
-        		//cargar articulos
-        		$('#lbLog').html(g_oArt.tostring());
-    			//$('#lbDesc').html('Descripción: ' + g_oArt.render_as_p());
-    			//$('#lbDesc').html('Descripción: ' + g_oArt.render_as_p());
-    			var l_oArt = new pck_Art.TART(oPedidos);
-    			//l_oArt.get_all(null,obs_loaded);
-    			l_oArt.dbget_all(l_oArt,null,obs_loaded);
-    			function obs_loaded()
-    			{	
-    				$('#lvArts').html('<div id="lvArts"></div>');
-    				$('#lvArts').html(render_as_tmpl(oPedidos));
-		  			$('#lvArts .ul_art').listview();
-		  			//$('#lvArts .ul_art').listview('refresh');
-	  				$('#lvArts').collapsible();
-	  				//$('#lvArts_kk').collapsible();
-				}
+        		//g_oArt.get_this(1);
+        		//g_oArt.get_all();
       		});
 
     		function show_art()
     		{
-
     			$('#lbLog').html(g_oArt.tostring());
     			//$('#lbDesc').html('Descripción: ' + g_oArt.render_as_p());
     			//$('#lbDesc').html('Descripción: ' + g_oArt.render_as_p());
-    			
-    			var l_oArt = new pck_Art.TART(oPedidos);
-    			//l_oArt.get_all(null,obs_loaded);
-    			l_oArt.dbget_all(l_oArt,null,obs_loaded);
-    			function obs_loaded()
-    			{	
-    				$('#lvArts').html('<div id="lvArts"></div>');
-    				$('#lvArts').html(render_as_tmpl(oPedidos));
-		  			//$('#lvArts .ul_art').listview();
-		  			//$('#lvArts .ul_art').listview('refresh');
-	  			
-	  				$('#lvArts').collapsible();
-	  				//$('#lvArts_kk').collapsible();
-				}
+    			var l_oArt = new TArt(oPedidos);
+    			l_oArt.get_all();
+    			$('#lvArts').html(render_as_tmpl(oPedidos));
+	  			$('#lvArts .ul_art').listview();
+	  			$('#lvArts .ul_art').listview('refresh');
+
     		}
 
     		function Get_From_Qr()
@@ -207,7 +185,7 @@
     		function search_art()
     		{
     			var sart = $('#tbCodigo').val(); 
-    			var oArt = new pck_Art.TART;
+    			var oArt = new TArt;
     			oArt.get_this(sart);
     			oArt.add2list();
     			$('#lbDesc').html(oArt.tostring());

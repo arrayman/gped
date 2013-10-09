@@ -5,7 +5,7 @@ com_arrayman_gped_db =
 		this.nombre='gped';
 		this.version='0.00';
 		this.displayname='Gped DB';
-		this.size = 1048576; //1MB
+		this.size = 1048576; //1MB 1000;//
 		//seccion PRIVATE
 		this.oMyDB='';
 		
