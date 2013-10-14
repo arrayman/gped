@@ -32,9 +32,9 @@ http://pxtoem.com/
 */
 
 @media all  {  
-	.my-breakpoint.ui-grid-c .ui-block-a { width: 9.80%; } 
-	.my-breakpoint.ui-grid-c .ui-block-b { width: 9.80%; } 
-	.my-breakpoint.ui-grid-c .ui-block-d { width: 79.80%; } 
+	.my-breakpoint.ui-grid-b .ui-block-a { width: 9.80%; } 
+	.my-breakpoint.ui-grid-b .ui-block-b { width: 9.80%; } 
+	.my-breakpoint.ui-grid-b .ui-block-c { width: 79.80%; } 
 	/*.my-breakpoint.ui-grid-d .ui-block-a { clear: left; }*/
 	}
 }

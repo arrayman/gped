@@ -46,10 +46,12 @@ com_arrayman_gped_ped=
     {
     },
     create_tblPEDS_INE:'',
-    create_tblArtXPED_INE:''
+    create_tblArtXPED_INE:'',
+    oPed : ''
 }
 
 var pck_Ped = com_arrayman_gped_ped;
+oPed = new pck_Ped.TPED();
 //DB
     pck_Ped.create_tblPEDS_INE = 'CREATE TABLE IF NOT EXISTS tblPEDS ' + 
         '( id integer primary key autoincrement, codigo varchar, descrip varchar, aux varchar )';
