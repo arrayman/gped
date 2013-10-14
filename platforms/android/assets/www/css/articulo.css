@@ -1,0 +1,42 @@
+/*
+
+http://pxtoem.com/
+
+75em -> 1200px
+50em -> 800px
+30em  -> 480px
+25em  -> 400px
+20em  -> 320px
+*/
+
+
+
+/*@media all and (min-width: 75em) {
+	.my-breakpoint.ui-grid-b .ui-block-a { width: 49.95%; }
+	.my-breakpoint.ui-grid-b .ui-block-b, 
+	.my-breakpoint.ui-grid-b .ui-block-c { width: 24.925%; }
+	.my-breakpoint.ui-grid-b .ui-block-a { clear: left; }
+	}
+}
+
+@media all and (max-width: 50em) {
+	.my-breakpoint .ui-block-a, 
+	.my-breakpoint .ui-block-b, 
+	.my-breakpoint .ui-block-c,
+	.my-breakpoint .ui-block-d,
+	.my-breakpoint .ui-block-e { 
+		width: 100%; 
+		float:none; 
+	}
+}
+*/
+
+@media all  {  
+	.my-breakpoint.ui-grid-d .ui-block-a { width: 9.80%; } 
+	.my-breakpoint.ui-grid-d .ui-block-b { width: 9.80%; } 
+	.my-breakpoint.ui-grid-d .ui-block-c { width: 4.80%; } 
+	.my-breakpoint.ui-grid-d .ui-block-d { width: 9.80%; } 
+	.my-breakpoint.ui-grid-d .ui-block-e { width: 64.80%; } 
+	/*.my-breakpoint.ui-grid-d .ui-block-a { clear: left; }*/
+	}
+}

@@ -10,6 +10,7 @@
 	<!-- <script src="./js/jquery-2.0.3.min.js"></script> -->
 	<!-- <script src="./js/JQueryMobile/jquery.mobile-1.3.2.min.js"></script>  -->
 	<link rel="stylesheet" href="./css/jquery.mobile-1.3.2.css" />
+	<link rel="stylesheet" href="./css/articulo.css" />
 	<!-- Bootstrap 
     <link href="./css/bootstrap.min.css" rel="stylesheet" media="screen">-->
 	
@@ -26,36 +27,36 @@
 		
 
 		<div data-role="content" >
-			<h3>DEMO PAGE</h3>
-			<div class="ui-grid-c">
+
+			<div class="ui-grid-d my-breakpoint">
 				<div class="ui-block-a">
-					<a data-role="button" data-inline="true" onclick= "Get_From_Qr()" data-icon="search" data-iconpos="right"> Qr </a>
+					<a data-role="button" data-inline="true" onclick= "Get_From_Qr()" data-icon="search" data-iconpos="right" data-min="true"> Qr </a>
 				</div>
 
 				<div class="ui-block-b">
-					<div data-role="fieldcontain" class="ui-hide-label " data-controltype="textinput">
+					<div data-role="fieldcontain" class="ui-hide-label " data-controltype="textinput" data-min="true">
 			            <label for="tbCodigo">Codigo:</label>
 			            <input type="text" name="Codigo" id="tbCodigo" value="" placeholder="Codigo" />
 					</div>
 				</div>
 
 				<div class="ui-block-c">
-					<div data-role="fieldcontain" class="ui-hide-label " data-controltype="textinput">
+					<div data-role="fieldcontain" class="ui-hide-label " data-controltype="textinput" data-min="true">
 			            <label for="tbUnidades">Unidades:</label>
 			            <input type="text" name="Unidades" id="tbUnidades" value="" placeholder="Cantidad" />
 					</div>
 				</div>
 
 				 <div class="ui-block-d">
-					€<a data-role="button" data-inline="true" onclick= "search_art()" data-icon="check"
-                      data-iconpos="right">
+					<a data-role="button" data-inline="true" onclick= "search_art()" data-icon="check" data-iconpos="right" data-min="true">
                           Add
             		</a>
 				</div>
+				<div class="ui-block-e">
+					<span id="lbDesc">Descripción: </span>
+				</div>
 			</div>
-			<span id="lbDesc">Descripción:</span>
 
-			
 			<!-- <div id="lvArts_kk" >
 				<h3> Articulos</h3>
 				<ul data-role="listview" data-inset="true">
@@ -80,7 +81,7 @@
 				</ul> -->
 			</div>
 
-			<div class="ui-grid-f">
+			<div class="ui-grid-d my-breakpoint">
 				<div class="ui-block-a">
 					<label for="search-basic">Search Input:</label>
 					<input type="search" name="search" id="search-basic" value="" />
@@ -112,12 +113,14 @@
 				<ul>
 					<!-- <li><a href="index.html#main" data-transition="none" rel="external">Lista</a></li>
 					<li><a href="index.html#pantalla2" data-transition="none" rel="external">Articulo</a></li> -->
+					<li><a href="index.html#main" rel="external">home</a></li>
+					<li><a href="pedidos.html#main" rel="external">pedidos</a></li>
 					<li><a href="articulo.html#main" rel="external">Articulos</a></li>
 					<li><a href="articulo2.html#main" rel="external">Articulos 2</a></li>
 					<!-- <li><a href="p1.html" data-transition="none" >p1</a></li> -->
 				</ul>
 			</div><!-- /navbar -->
-			<div class="ui-grid-b">
+			<div class="ui-grid-b my-breakpoint">
 				<div class="ui-block-a">
 					<p id="lbLog" > log: </p>		
 				</div>
@@ -136,7 +139,7 @@
 
 	<script src="./js/jquery-2.0.3.js"></script>
     <script src="./js/JQueryMobile/jquery.mobile-1.3.2.js"></script> 
-    <!--<script type="text/javascript" src="cordova.js"></script>-->
+    <script type="text/javascript" src="cordova.js"></script>
 
     <!-- app files-->
         <script type="text/javascript" src="js/app/pedido.js"></script>
@@ -179,31 +182,47 @@
 
     		function show_art()
     		{
+    			cordova
 
-    			$('#lbLog').html(g_oArt.tostring());
-    			//$('#lbDesc').html('Descripción: ' + g_oArt.render_as_p());
-    			//$('#lbDesc').html('Descripción: ' + g_oArt.render_as_p());
+    // 			$('#lbLog').html(g_oArt.tostring());
     			
-    			var l_oArt = new pck_Art.TART(oPedidos);
-    			//l_oArt.get_all(null,obs_loaded);
-    			l_oArt.dbget_all(l_oArt,null,obs_loaded);
-    			function obs_loaded()
-    			{	
-    				$('#lvArts').html('<div id="lvArts"></div>');
-    				$('#lvArts').html(render_as_tmpl(oPedidos));
-		  			//$('#lvArts .ul_art').listview();
-		  			//$('#lvArts .ul_art').listview('refresh');
+    // 			var l_oArt = new pck_Art.TART(oPedidos);
+
+    // 			l_oArt.dbget_all(l_oArt,null,obs_loaded);
+    // 			function obs_loaded()
+    // 			{	
+    // 				$('#lvArts').html('<div id="lvArts"></div>');
+    // 				$('#lvArts').html(render_as_tmpl(oPedidos));
+		  // 			//$('#lvArts .ul_art').listview();
+		  // 			//$('#lvArts .ul_art').listview('refresh');
 	  			
-	  				$('#lvArts').collapsible();
-	  				//$('#lvArts_kk').collapsible();
-				}
+	  	// 			$('#lvArts').collapsible();
+	  	// 			//$('#lvArts_kk').collapsible();
+				// }
     		}
 
     		function Get_From_Qr()
     		{	
-    			$('#lbLog').html("inside function Get_From_Qr ");
+    			$('#lbLog').html("dentro function Get_From_Qr ");
     			//cordova
+
+    			cordova.plugins.barcodeScanner.scan(
+     				function (result) {
+          				alert("We got a barcode\n" +
+                			"Result: " + result.text + "\n" +
+	                		"Format: " + result.format + "\n" +
+    	            		"Cancelled: " + result.cancelled);
+      				}, 
+      				function (error) {
+          				alert("Scanning failed: " + error);
+      				}
+   				);
+
+   				alert('fin scan');
     		}
+
+
+
     		function search_art()
     		{
     			var sart = $('#tbCodigo').val(); 

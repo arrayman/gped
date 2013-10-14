@@ -11,6 +11,9 @@
     <feature name="App">
         <param name="android-package" value="org.apache.cordova.App" />
     </feature>
+    <feature name="BarcodeScanner">
+        <param name="android-package" value="com.phonegap.plugins.barcodescanner.BarcodeScanner" />
+    </feature>
     <access origin="*" />
     <access origin="http://*.arrayman.com" />
     <access origin="http://*.ncs.es" />
