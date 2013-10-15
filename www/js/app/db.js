@@ -83,7 +83,7 @@ com_arrayman_gped_db =
 			function(err)
 			{
 				//alert("error " + err.code + ' ' + err.message);
-				console.log("error " + err.code + ' ' + err.message);
+				console.log("error ejecutando " + sql + err.code + ' ' + err.message);
 			},
 			function()
 			{

@@ -10,7 +10,7 @@ com_arrayman_gped_ped=
             
         this.list = alista_pedidos ;//aTPed;
 
-        function init(oPed)
+        this.init = function init()
         {
             if (this.list==null)
             {
@@ -26,7 +26,7 @@ com_arrayman_gped_ped=
             // this.get_all=get_arts;
             // this.tostring=tostring;
             //this.add2list=add2list;            
-        function add2list()
+        this.add2list = function add2list()
         {
             this.list.push(this);
         }

@@ -75,7 +75,7 @@
 			</div>
 
 			<div>
-				<a data-role="button" data-inline="true" onclick= "Get_From_Qr()" data-icon="search" data-iconpos="right" data-min="true"> Nuevo pedido </a>
+				<a data-role="button" data-inline="true" onclick= "Nuevo_pedido()" data-icon="search" data-iconpos="right" data-min="true"> Nuevo pedido </a>
 			</div>
 
 		</div>		
@@ -104,7 +104,9 @@
 		</div> 
     </div>
 	
-
+    <div data-role="page" id="main" data-title="Geped" >
+    	
+    </div>
 
 	<script src="./js/jquery-2.0.3.js"></script>
     <script src="./js/JQueryMobile/jquery.mobile-1.3.2.js"></script> 
@@ -125,9 +127,10 @@
         <script type="text/javascript" >
         
 		//var apiUrl = oArt.url_get_arts;
-			var g_oArt = pck_Art.oArt; //new TArt;
+			//var g_oArt = pck_Art.oArt; //new TArt;
+			var g_oPed = pck_Ped.oPed;
 					
-			var oPedidos = new Array();
+			//var oPedidos = new Array();
 
 			function load_arts_in_lv()
 			{

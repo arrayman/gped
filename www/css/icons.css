@@ -1,0 +1,25 @@
+.ui-icon-directions{
+	background-image:
+	url(../icons/icons-gray/113-navigation.png);
+	height:28px;
+	width:28px;
+	background-size:28px 28px;
+	margin-left: -14px !important;
+}
+
+
+.ui-icon-cloud{
+	background-image:
+	url(./icons/glyphish/56-cloud.png);
+	height:28px;
+	width:28px;
+	background-size:28px 28px;
+	margin-left: -14px !important;
+}
+
+.glyphishIcon .ui-icon{
+-moz-border-radius: 0px;
+-webkit-border-radius: 0px;
+border-radius: 0px;
+background-color:transparent;
+}
