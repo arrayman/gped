@@ -26,7 +26,7 @@ var oApp =
 		//alert('init '+ this + '  ' + $p1);
 		
 		this.EnlazaEventos();
-		this.version = 'v1.00.01';
+		this.version = 'v1.00.02';
 		
 	},
 	

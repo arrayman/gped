@@ -66,7 +66,7 @@ com_arrayman_gped_db =
 
 		oTDb.oMyDB.transaction(do_select, error_select);
 	},
-	run_sql : function(oTDb,sql)
+	run_sql : function(oTDb,sql,observer)
 	{	
 		if (oTDb.oMyDB.transaction == null)
 		{
@@ -84,10 +84,13 @@ com_arrayman_gped_db =
 			{
 				//alert("error " + err.code + ' ' + err.message);
 				console.log("error ejecutando " + sql + err.code + ' ' + err.message);
+				if (observer != null)
+					observer('no se pudo insertar');
 			},
 			function()
 			{
-				//ok 
+				if (observer != null)
+					observer();	//ok 
 			}
 		);
 	},

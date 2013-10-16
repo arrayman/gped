@@ -31,10 +31,23 @@ http://pxtoem.com/
 }
 */
 
-@media all  {  
+@media all and (max-width:30em)  {  
+	.my-breakpoint.ui-grid-b .ui-block-a { width: 49.80%; } 
+	.my-breakpoint.ui-grid-b .ui-block-b { width: 49.80%; } 
+	.my-breakpoint.ui-grid-b .ui-block-c { width: 99.80%; } 
+	.my-breakpoint.ui-grid-d .ui-block-a { clear: left; }
+}
+
+@media all and (max-width:50em)  {  
 	.my-breakpoint.ui-grid-b .ui-block-a { width: 9.80%; } 
 	.my-breakpoint.ui-grid-b .ui-block-b { width: 9.80%; } 
 	.my-breakpoint.ui-grid-b .ui-block-c { width: 79.80%; } 
-	/*.my-breakpoint.ui-grid-d .ui-block-a { clear: left; }*/
-	}
+	.my-breakpoint.ui-grid-d .ui-block-a { clear: left; }
+}
+
+@media all and (min-width: 75em) {  
+	.my-breakpoint.ui-grid-b .ui-block-a { width: 4.80%; } 
+	.my-breakpoint.ui-grid-b .ui-block-b { width: 4.80%; } 
+	.my-breakpoint.ui-grid-b .ui-block-c { width: 89.80%; } 
+	.my-breakpoint.ui-grid-d .ui-block-a { clear: left; }
 }

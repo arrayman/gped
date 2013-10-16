@@ -91,8 +91,7 @@ com_arrayman_gped_art=
     mas:function()
     {
     },
-    create_tblARTS_INE:'',
-    insert_tblARTS:''
+    create_tblARTS_INE:''
 }
 
 var pck_Art = com_arrayman_gped_art;

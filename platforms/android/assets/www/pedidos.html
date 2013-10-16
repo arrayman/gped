@@ -10,7 +10,8 @@
 	<!-- <script src="./js/jquery-2.0.3.min.js"></script> -->
 	<!-- <script src="./js/JQueryMobile/jquery.mobile-1.3.2.min.js"></script>  -->
 	<link rel="stylesheet" href="./css/jquery.mobile-1.3.2.css" />
-	<link rel="stylesheet" href="./css/pedido.css" />
+	<link rel="stylesheet" href="./css/pedido.css" /> 
+	<link rel="stylesheet" href="./css/icons.css" /> 
 	<!-- Bootstrap 
     <link href="./css/bootstrap.min.css" rel="stylesheet" media="screen">-->
 	
@@ -24,7 +25,6 @@
             <!-- <h1> Gestion de pedidos </h1> -->
 			Gestion de pedidos - Pedidos
         </div>
-		
 
 		<div data-role="content" >
 			<div class="ui-grid-b my-breakpoint">
@@ -40,43 +40,83 @@
 					<h6>descripción</h6>
 				</div>
 
-
+				<span id="grid_pedidos"</span>
 
 				<div class="ui-block-a">
 
 				</div>
 
 				<div class="ui-block-b">
-					25068
+
 				
 				</div>
 
 				<div class="ui-block-c">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 				</div>
 
-				<div class="ui-block-a">
+			</div>
+		
 
-				</div>
+		<div>
+				<a href="#popupPedido" class="glyphishIcon" data-rel="popup" data-position-to="window" data-role="button"  data-inline="true" data-icon="pedido" data-transition="pop" data-iconpos="top" data-min="true" > Nuevo pedido </a>
 
-				<div class="ui-block-b">
-					110
-				</div>
+				
+				<!-- <a href="#popup" data-role="button" data-rel="dialog" data-transition="pop" data-theme="c" class="ui-btn ui-btn-corner-all ui-shadow ui-btn-up-c"><span class="ui-btn-inner ui-btn-corner-all" aria-hidden="true"><span class="ui-btn-text">Show page "popup" (as a dialog)</span></span></a> -->
 
-				<div class="ui-block-c">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					.
-				</div>
+<!-- 				<a href="#popupPedido" class="glyphishIcon" data-rel="popup" data-position-to="window" data-role="button" data-inline="true" data-icon="check" data-theme="a" data-transition="pop">Sign in</a>
+				
+
+				<a href="#popupPedido" data-rel="popup" data-position-to="window" data-role="button" data-inline="true" data-icon="check" data-theme="a" data-transition="pop">Sign in</a> -->
 			</div>
 
-			<div>
-				<a data-role="button" data-inline="true" onclick= "Nuevo_pedido()" data-icon="search" data-iconpos="right" data-min="true"> Nuevo pedido </a>
+<!-- <div data-role="dialog" id="popup" data-url="popup" tabindex="0" class="ui-page ui-body-c ui-overlay-a ui-dialog ui-page-active" role="dialog" style="min-height: 802px;">
+				<div data-role="header" data-theme="e" class="ui-corner-top ui-overlay-shadow ui-header ui-bar-e" role="banner">
+					<a href="#" data-icon="delete" data-iconpos="notext" class="ui-btn-left ui-btn ui-btn-up-e ui-btn-icon-notext ui-btn-corner-all ui-shadow" title="Close" data-theme="e">
+						<span class="ui-btn-inner ui-btn-corner-all" aria-hidden="true">
+							<span class="ui-btn-text">Close</span>
+								<span class="ui-icon ui-icon-delete ui-icon-shadow"></span>
+						</span>
+					</a>
+					<h1 class="ui-title" tabindex="0" role="heading" aria-level="1">Dialog</h1>
+				</div>
+
+				<div data-role="content" data-theme="d" class="ui-overlay-shadow ui-content ui-body-d" role="main">	
+					<h2>Popup</h2>
+					<p>I have an id of "popup" on my page container and only look like a dialog because the link to me had a 
+						<code>data-rel="dialog"</code> 
+						attribute which gives me this inset look and a 
+						<code>data-transition="pop"</code> 
+						attribute to change the transition to pop. Without this, I'd be styled as a normal page.
+					</p>		
+					<p><a href="#main" data-rel="back" data-role="button" data-inline="true" data-icon="back" data-theme="d" 
+						class="ui-btn ui-btn-inline ui-btn-icon-left ui-btn-corner-all ui-shadow ui-btn-up-d" data-transition="pop" data-direction="reverse">
+						<span class="ui-btn-inner ui-btn-corner-all" aria-hidden="true">
+							<span class="ui-btn-text">Back to page "one"</span>
+								<span class="ui-icon ui-icon-back ui-icon-shadow"></span>
+						</span>
+					</a>
+					</p>	
+				</div>
+			
+				<div data-role="footer" class="ui-overlay-shadow ui-corner-bottom ui-footer ui-bar-a" role="contentinfo">
+					<h4 class="ui-title" tabindex="0" role="heading" aria-level="1">Page Footer</h4>
+				</div>
 			</div>
+ -->
+
+			<div data-role="popup" id="popupPedido" data-theme="a" class="ui-corner-all">
+	    		<!-- <form> -->
+	        		<div style="padding:10px 20px;">
+			            <h3>Nuevo pedido</h3>
+			            <label for="tbcod" class="ui-hidden-accessible">codigo:</label>
+	            		<input type="text" size=5 name="user" id="tbcod" value="" placeholder="codigo" data-theme="a">
+	            		<label for="tbdesc" class="ui-hidden-accessible">descripción:</label>
+	            		<input type="text" name="pass" id="tbdesc" value="" placeholder="descripción" data-theme="a">
+	            		<button onclick= "grabar_pedido()" type="submit" data-theme="c" data-icon="check">Guardar</button>
+	        		</div>
+	    		<!-- </form> -->
+			</div>
+
 
 		</div>		
 				
@@ -102,10 +142,58 @@
 				</div>
 			</div>
 		</div> 
+
+
     </div>
-	
-    <div data-role="page" id="main" data-title="Geped" >
-    	
+
+
+<!-- ********************************************************* -->	
+<!-- *****PAGINA POPUP**** -->	
+<!-- ********************************************************* -->	
+
+
+
+
+    <div data-role="dialog" id="pops_art" data-title="Geped" >
+    	<div class="ui-grid-b my-breakpoint">
+				<div class="ui-block-a">
+					<a class="glyphishIcon" data-role="button" data-inline="true" onclick= "Grabar_pedido()" data-icon="check" data-iconpos="right" data-min="true"> Grabar </a>
+				</div>
+
+				<div class="ui-block-b">
+					<h6>codigo</h6>
+				</div>
+
+				<div class="ui-block-c">
+					<h6>descripción</h6>
+				</div>
+
+
+				<div class="ui-block-a">
+
+				</div>
+
+				<div class="ui-block-b">
+					
+				
+				</div>
+
+				<div class="ui-block-c">
+				</div>
+
+				<div class="ui-block-a">
+
+				</div>
+
+				<div class="ui-block-b">
+					110
+				</div>
+
+				<div class="ui-block-c">
+
+					.
+				</div>
+			</div>
     </div>
 
 	<script src="./js/jquery-2.0.3.js"></script>
@@ -126,48 +214,58 @@
 
         <script type="text/javascript" >
         
-		//var apiUrl = oArt.url_get_arts;
-			//var g_oArt = pck_Art.oArt; //new TArt;
-			var g_oPed = pck_Ped.oPed;
+			
 					
-			//var oPedidos = new Array();
-
-			function load_arts_in_lv()
-			{
-				//cargar articulos
-        		$('#lbLog').html(g_oArt.tostring());
-    			//$('#lbDesc').html('Descripción: ' + g_oArt.render_as_p());
-    			//$('#lbDesc').html('Descripción: ' + g_oArt.render_as_p());
-    			var l_oArt = new pck_Art.TART(oPedidos);
-    			//l_oArt.get_all(null,obs_loaded);
-    			l_oArt.dbget_all(l_oArt,null,obs_loaded);
-    			function obs_loaded()
-    			{	
-    				$('#lvArts').html('<div id="lvArts"></div>');
-    				$('#lvArts').html(render_as_tmpl(oPedidos));
-		  			$('#lvArts .ul_art').listview();
-		  			//$('#lvArts .ul_art').listview('refresh');
-	  				$('#lvArts').collapsible();
-	  				//$('#lvArts_kk').collapsible();
-				}
-			};
-
     		$(document).ready(function () 
     		{
         		//load_arts_in_lv();
+        		var g_oPed = pck_Ped.oPed;
+        		render_pedidos();
       		});
 
     		
+    		function grabar_pedido()
+    		{
+    			oPed = new pck_Ped.TPED();
+    			oPed.codigo = $('#tbcod').val();
+    			oPed.descrip = $('#tbdesc').val();
+    			oPed.fecha = Date();
 
+    			pck_Db.run_sql(pck_Db.oTDb,pck_Ped.db_Crud_tblPEDS(oPed),observer);  //inserto el pedido en sqlite
 
+    			function observer(oresult)
+    			{
+    				if (oresult != null) //error
+    					alert(oresult);
+    				else
+    					render_pedidos();
 
+    			}
+    		}
 
+    		function render_pedidos(bRelolad)
+    		{
+    			//$('#grid_pedidos').html('<div class="ui-block-a"> botones </div><div class="ui-block-b">2123 </div> <div class="ui-block-c">Descripcion de 2123 </div>');
+    			
+    			//if (g_oPed.list.count() == 0) or (bRelolad)
+    			if (g_oPed == null)
+    				var g_oPed = pck_Ped.oPed;
 
+				pck_Ped.dbget_peds(g_oPed,null,obs_loaded);
 
+				function obs_loaded()
+				{
+					$('#grid_pedidos').html(pck_Ped.render_as_tmpl(g_oPed));    					
+				}
 
-
-
-
+    // 			<div class="ui-block-a">
+				// </div>
+				// <div class="ui-block-b">
+				// </div>
+				// <div class="ui-block-c">
+				// </div>
+    			//alert('registro insertado');
+	   		}
     </script>
 
 </body>
