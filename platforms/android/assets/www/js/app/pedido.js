@@ -79,18 +79,19 @@ com_arrayman_gped_ped=
 
     },
     render_as_tmpl : function(data,stmpl)
-    {
-        // var titleTemplate = $.templates( "<tr><td colspan=3>{{>name}}</td></tr>" ),
-        // detailTemplate = $.templates( "<tr><td>{{>name}}</td><td>Released: {{>releaseYear}}</td><td>director: {{>director}}</td></tr>" ),
-        // var s1 = '<div id="lvArts" data-role="collapsible" >' +
-        //              '<h3> Articulos</h3>' +
-        //              '<ul class="ul_art" data-role="listview" data-inset="true">';
-        var s1 =    '<h3> Pedidos</h3>' +
-                    '<ul class="ul_art" data-role="listview" data-inset="true">';
-        var sTmp = $.templates('<li>{{>descrip}}</li>');
+    {        //<a href="index.html" data-role="button" data-icon="delete" data-iconpos="notext" onclick="grid_click()">borrar</a>
+        function botones(id)
+        {
+            //return '<a href="index.html" data-role="button" data-icon="delete" data-iconpos="notext" onclick="grid_click('+ id +')">borrar</a>';
+        }
+        var sTmp = $.templates('<div class="ui-block-a"> ' + 
+                                    '<a href="" data-role="button" data-icon="delete" data-iconpos="notext" onclick="grid_click({{>id}})">borrar</a>' + 
+                               '</div>' + 
+                               '<div class="ui-block-b">{{>codigo}} </div>' + 
+                               '<div class="ui-block-c">{{>descrip}} </div>');
         var sRend = sTmp.render(data);
-        s1 = s1 + sRend +'</ul>';//</div>';
-        return s1;
+        
+        return sRend;
     },
     mas:function()
     {
@@ -111,7 +112,7 @@ com_arrayman_gped_ped=
 }
 
 var pck_Ped = com_arrayman_gped_ped;
-    oPed = new pck_Ped.TPED();
+    pck_Ped.oPed = new pck_Ped.TPED();
 
 //DB
     pck_Ped.create_tblPEDS_INE = 'CREATE TABLE IF NOT EXISTS tblPEDS ' + 

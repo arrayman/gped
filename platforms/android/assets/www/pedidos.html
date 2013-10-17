@@ -28,86 +28,65 @@
 
 		<div data-role="content" >
 			<div class="ui-grid-b my-breakpoint">
-				<div class="ui-block-a">
-					<h6>+</h6>
-				</div>
+				<span id="grid_pedidos_cab">
+					<div class="ui-block-a">
+						<div data-role="controlgroup" data-type="horizontal" data-mini="true">
+							<a href="" data-role="button" data-icon="arrow-u" data-iconpos="notext">Up</a>
+							<a href="" data-role="button" data-icon="arrow-d" data-iconpos="notext">Down</a>
+							<a href="" data-role="button" data-icon="delete" data-iconpos="notext" onclick="grid_click()">Delete</a>
+						</div>
+					</div>
 
-				<div class="ui-block-b">
-					<h6>codigo</h6>
-				</div>
+					<div class="ui-block-b">
+						<h6>codigo</h6>
+					</div>
 
-				<div class="ui-block-c">
-					<h6>descripción</h6>
-				</div>
+					<div class="ui-block-c">
+						<h6>descripción</h6> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ven
+						id est laborum.
+					</div>
+				</span>
 
-				<span id="grid_pedidos"</span>
+				<span id="grid_pedidos"> 
+				</span>
 
-				<div class="ui-block-a">
+				<span id="grid_pedidos_pie">
+					<div class="ui-block-a">
+						pie
+					</div>
 
-				</div>
-
-				<div class="ui-block-b">
-
-				
-				</div>
-
-				<div class="ui-block-c">
-				</div>
-
+					<div class="ui-block-b">
+						pie
+					</div>
+					<div class="ui-block-c">
+						pie
+					</div>
+				 </span>
 			</div>
-		
-
-		<div>
+			<div>
 				<a href="#popupPedido" class="glyphishIcon" data-rel="popup" data-position-to="window" data-role="button"  data-inline="true" data-icon="pedido" data-transition="pop" data-iconpos="top" data-min="true" > Nuevo pedido </a>
-
-				
 				<!-- <a href="#popup" data-role="button" data-rel="dialog" data-transition="pop" data-theme="c" class="ui-btn ui-btn-corner-all ui-shadow ui-btn-up-c"><span class="ui-btn-inner ui-btn-corner-all" aria-hidden="true"><span class="ui-btn-text">Show page "popup" (as a dialog)</span></span></a> -->
-
-<!-- 				<a href="#popupPedido" class="glyphishIcon" data-rel="popup" data-position-to="window" data-role="button" data-inline="true" data-icon="check" data-theme="a" data-transition="pop">Sign in</a>
-				
-
+				<!--	<a href="#popupPedido" class="glyphishIcon" data-rel="popup" data-position-to="window" data-role="button" data-inline="true" data-icon="check" data-theme="a" data-transition="pop">Sign in</a>
 				<a href="#popupPedido" data-rel="popup" data-position-to="window" data-role="button" data-inline="true" data-icon="check" data-theme="a" data-transition="pop">Sign in</a> -->
 			</div>
-
-<!-- <div data-role="dialog" id="popup" data-url="popup" tabindex="0" class="ui-page ui-body-c ui-overlay-a ui-dialog ui-page-active" role="dialog" style="min-height: 802px;">
-				<div data-role="header" data-theme="e" class="ui-corner-top ui-overlay-shadow ui-header ui-bar-e" role="banner">
-					<a href="#" data-icon="delete" data-iconpos="notext" class="ui-btn-left ui-btn ui-btn-up-e ui-btn-icon-notext ui-btn-corner-all ui-shadow" title="Close" data-theme="e">
-						<span class="ui-btn-inner ui-btn-corner-all" aria-hidden="true">
-							<span class="ui-btn-text">Close</span>
-								<span class="ui-icon ui-icon-delete ui-icon-shadow"></span>
-						</span>
-					</a>
-					<h1 class="ui-title" tabindex="0" role="heading" aria-level="1">Dialog</h1>
-				</div>
-
-				<div data-role="content" data-theme="d" class="ui-overlay-shadow ui-content ui-body-d" role="main">	
-					<h2>Popup</h2>
-					<p>I have an id of "popup" on my page container and only look like a dialog because the link to me had a 
-						<code>data-rel="dialog"</code> 
-						attribute which gives me this inset look and a 
-						<code>data-transition="pop"</code> 
-						attribute to change the transition to pop. Without this, I'd be styled as a normal page.
-					</p>		
-					<p><a href="#main" data-rel="back" data-role="button" data-inline="true" data-icon="back" data-theme="d" 
-						class="ui-btn ui-btn-inline ui-btn-icon-left ui-btn-corner-all ui-shadow ui-btn-up-d" data-transition="pop" data-direction="reverse">
-						<span class="ui-btn-inner ui-btn-corner-all" aria-hidden="true">
-							<span class="ui-btn-text">Back to page "one"</span>
-								<span class="ui-icon ui-icon-back ui-icon-shadow"></span>
-						</span>
-					</a>
-					</p>	
-				</div>
-			
-				<div data-role="footer" class="ui-overlay-shadow ui-corner-bottom ui-footer ui-bar-a" role="contentinfo">
-					<h4 class="ui-title" tabindex="0" role="heading" aria-level="1">Page Footer</h4>
-				</div>
-			</div>
- -->
-
 			<div data-role="popup" id="popupPedido" data-theme="a" class="ui-corner-all">
 	    		<!-- <form> -->
 	        		<div style="padding:10px 20px;">
-			            <h3>Nuevo pedido</h3>
+	        			<div class="ui-grid-a">
+	        				<div class="ui-block-a">
+	        					<h5>Nuevo pedido</h5>	
+	        				</div>
+	        				<div class="ui-block-b">
+	        					<a class="ui-btn-right" href="pedidos.html" data-role="button" data-icon="delete" data-iconpos="notext">Delete</a>
+	        				</div>
+	        			</div>
+
+	        			<div data-role="controlgroup" data-type="horizontal" data-mini="true">
+	        			
+	        			</div>
+	        			
+			            
 			            <label for="tbcod" class="ui-hidden-accessible">codigo:</label>
 	            		<input type="text" size=5 name="user" id="tbcod" value="" placeholder="codigo" data-theme="a">
 	            		<label for="tbdesc" class="ui-hidden-accessible">descripción:</label>
@@ -116,11 +95,7 @@
 	        		</div>
 	    		<!-- </form> -->
 			</div>
-
-
 		</div>		
-				
-			
 		<div data-role="footer" data-theme="a" data-position="fixed">
 			<div data-role="navbar">
 				<ul>
@@ -133,26 +108,20 @@
 				<div class="ui-block-a">
 					<p id="lbLog" > log: </p>		
 				</div>
-
-
 				<div class="ui-block-b">
-					<p class="ui-btn-right"> <a>(c) arrayman.com</a> </p> 
 					<a href="index.html#main" data-rel="back" data-role="button" > Regresar 2</a>
-					<!-- <span style="float:right"> <a>(c) arrayman.com</a> </span>--> 
+				</div>
+				<div class="ui-block-c">
+						<p class="ui-btn-right"> <a>(c) arrayman.com</a> </p> 
 				</div>
 			</div>
 		</div> 
-
-
     </div>
 
 
 <!-- ********************************************************* -->	
 <!-- *****PAGINA POPUP**** -->	
 <!-- ********************************************************* -->	
-
-
-
 
     <div data-role="dialog" id="pops_art" data-title="Geped" >
     	<div class="ui-grid-b my-breakpoint">
@@ -196,6 +165,11 @@
 			</div>
     </div>
 
+
+<!-- ********************************************************* -->	
+<!-- ***** CODIGO **** -->	
+<!-- ********************************************************* -->	
+
 	<script src="./js/jquery-2.0.3.js"></script>
     <script src="./js/JQueryMobile/jquery.mobile-1.3.2.js"></script> 
     <script type="text/javascript" src="cordova.js"></script>
@@ -215,11 +189,11 @@
         <script type="text/javascript" >
         
 			
-					
+			var g_oPed = '';
     		$(document).ready(function () 
     		{
         		//load_arts_in_lv();
-        		var g_oPed = pck_Ped.oPed;
+        		g_oPed = pck_Ped.oPed;		
         		render_pedidos();
       		});
 
@@ -247,15 +221,16 @@
     		{
     			//$('#grid_pedidos').html('<div class="ui-block-a"> botones </div><div class="ui-block-b">2123 </div> <div class="ui-block-c">Descripcion de 2123 </div>');
     			
-    			//if (g_oPed.list.count() == 0) or (bRelolad)
+    			//if (g_oPed.list.length == 0) or (bRelolad)
     			if (g_oPed == null)
-    				var g_oPed = pck_Ped.oPed;
+    				g_oPed = pck_Ped.oPed;
 
 				pck_Ped.dbget_peds(g_oPed,null,obs_loaded);
 
 				function obs_loaded()
 				{
-					$('#grid_pedidos').html(pck_Ped.render_as_tmpl(g_oPed));    					
+					$('#grid_pedidos').html(pck_Ped.render_as_tmpl(g_oPed.list));    	
+					$("a").button();				
 				}
 
     // 			<div class="ui-block-a">
@@ -266,6 +241,11 @@
 				// </div>
     			//alert('registro insertado');
 	   		}
+
+	   		function grid_click(obj)
+			{
+					alert(obj);
+			}
     </script>
 
 </body>
