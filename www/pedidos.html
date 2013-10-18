@@ -183,7 +183,7 @@
 				function obs_loaded()
 				{
 					$('#grid_pedidos').html(pck_Ped.render_as_tmpl(g_oPed.list));    	
-					//$('a').button();
+					$('a').button();
 					$("[data-role=controlgroup]").controlgroup();	//forzamos la aplicacion de estilos a posteriori	
 
 				}
@@ -199,8 +199,8 @@
 
 	   		function grid_click(obj,op)
 			{
-					alert(obj);
-					alert(op);
+					alert(obj+op);
+					//alert(op);
 			}
     </script>
 

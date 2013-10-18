@@ -84,11 +84,16 @@ com_arrayman_gped_ped=
         {
             //return '<a href="index.html" data-role="button" data-icon="delete" data-iconpos="notext" onclick="grid_click('+ id +')">borrar</a>';
         }
-        var sTmp = $.templates('<div class="ui-block-a"> ' + 
-                                    '<a href="" data-role="button" data-icon="delete" data-iconpos="notext" onclick="grid_click({{>id}})">borrar</a>' + 
-                               '</div>' + 
-                               '<div class="ui-block-b">{{>codigo}} </div>' + 
-                               '<div class="ui-block-c">{{>descrip}} </div>');
+        var sTmp = $.templates( '<div class="ui-block-a"> ' + 
+                                    '<div data-role="controlgroup" data-type="horizontal" data-mini="true">' +
+                                        '<a href="" data-role="button" data-icon="delete" data-iconpos="notext" onclick="grid_click({{>id}},' + 'b' + ')">borrar</a>' + 
+                                        '<a href="" data-role="button" data-icon="check" data-iconpos="notext" onclick="grid_click({{>id}},' + 'g' + ')">grabar</a>' + 
+                                        '<a href="" data-role="button" data-icon="arrow-d" data-iconpos="notext" onclick="grid_click(1,d)">Down</a>' +
+                                     '</div>' + 
+                                '</div>' +
+                                '<div class="ui-block-b">{{>codigo}} </div>' + 
+                                '<div class="ui-block-c">{{>descrip}} </div>');
+
         var sRend = sTmp.render(data);
         
         return sRend;

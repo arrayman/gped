@@ -86,9 +86,9 @@ com_arrayman_gped_ped=
         }
         var sTmp = $.templates( '<div class="ui-block-a"> ' + 
                                     '<div data-role="controlgroup" data-type="horizontal" data-mini="true">' +
-                                        '<a href="" data-role="button" data-icon="delete" data-iconpos="notext" onclick="grid_click({{>id}},' + 'b' + ')">borrar</a>' + 
-                                        '<a href="" data-role="button" data-icon="check" data-iconpos="notext" onclick="grid_click({{>id}},' + 'g' + ')">grabar</a>' + 
-                                        '<a href="" data-role="button" data-icon="arrow-d" data-iconpos="notext" onclick="grid_click(1,d)">Down</a>' +
+                                        '<a href="" data-role="button" data-icon="delete" data-iconpos="notext" onclick="grid_click(\'{{>id}}\',\'b\')">borrar</a>' + 
+                                        '<a href="" data-role="button" data-icon="check" data-iconpos="notext" onclick="grid_click(\'{{>id}}\',\'g\')">grabar</a>' + 
+                                        '<a href="" data-role="button" data-icon="arrow-d" data-iconpos="notext" onclick="grid_click(\'1\',\'d\')">Down</a>' +
                                      '</div>' + 
                                 '</div>' +
                                 '<div class="ui-block-b">{{>codigo}} </div>' + 
