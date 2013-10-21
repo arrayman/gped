@@ -30,15 +30,15 @@
 			<div class="ui-grid-b my-breakpoint">
 				<span id="grid_pedidos_cab">
 					<div class="ui-block-a">
-						<div data-role="controlgroup" data-type="horizontal" data-mini="true">
+						<!-- <div data-role="controlgroup" data-type="horizontal" data-mini="true">
 							<a href="" data-role="button" data-icon="arrow-u" data-iconpos="notext">Up</a>
 							<a href="" data-role="button" data-icon="arrow-d" data-iconpos="notext">Down</a>
 							<a href="" data-role="button" data-icon="delete" data-iconpos="notext" onclick="grid_click('1','b')">Delete</a>
-						</div> 
+						</div>  -->
 					</div>
 
 					<div class="ui-block-b">
-						<h6>codigo</h6>
+						<h4>codigo</h4>
 					</div>
 
 					<div class="ui-block-c">
@@ -71,12 +71,17 @@
 			<div data-role="popup" id="popupPedido" data-theme="a" class="ui-corner-all">
 	    		<!-- <form> -->
 	        		<div style="padding:10px 20px;">
-	        			<div class="ui-grid-a">
+	        			<div class="ui-grid-d">
 	        				<div class="ui-block-a">
-	        					<h5>Nuevo pedido</h5>	
+	        					<h6>Nuevo</h6>	
 	        				</div>
-	        				<div class="ui-block-b">
-	        					<a class="ui-btn-right" href="pedidos.html" data-role="button" data-icon="delete" data-iconpos="notext">Delete</a>
+							<div class="ui-block-b">
+								<h6>pedido</h6>	
+							</div>
+							<div class="ui-block-c"></div>
+							<div class="ui-block-d"></div>
+	        				<div class="ui-block-e">
+	        					<a class="ui-btn-right" href="pedidos.html" data-role="button" data-icon="delete" data-iconpos="notext">Cerrar</a>
 	        				</div>
 	        			</div>
 
@@ -89,11 +94,13 @@
 	            		<input type="text" size=5 name="user" id="tbcod" value="" placeholder="codigo" data-theme="a">
 	            		<label for="tbdesc" class="ui-hidden-accessible">descripción:</label>
 	            		<input type="text" name="pass" id="tbdesc" value="" placeholder="descripción" data-theme="a">
-	            		<button onclick= "grabar_pedido()" type="submit" data-theme="c" data-icon="check">Guardar</button>
+	            		<!-- <button onclick= "grabar_pedido()" type="submit" data-theme="c" data-icon="check">Guardar</button> -->
+						<a class="ui-btn-right" href="#" onclick= "grabar_pedido()" data-role="button" data-inline="false" data-icon="check" data-iconpos="left">Guardar</a>
 	        		</div>
 	    		<!-- </form> -->
 			</div>
-			<a href="" data-role="button" data-icon="check" data-iconpos="notext" onclick="grid_click(1,g)">grabar</a>
+			<!-- <a href="" data-role="button" data-icon="check" data-iconpos="notext" onclick="grid_click(1,g)">grabar</a> -->
+			
 		</div>		
 		<div data-role="footer" data-theme="a" data-position="fixed">
 			<div data-role="navbar">
@@ -201,6 +208,18 @@
 			{
 					alert(obj+op);
 					//alert(op);
+					switch(op)
+					{
+					case b:
+						//borrar
+						
+						break;
+					case g:
+						//grabar (update)
+						break;
+					default:
+						//code to be executed if n is different from case 1 and 2
+					}
 			}
     </script>
 
